@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+  background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,.5)), url("https://iili.io/2nI6IS.png");
+  height: 104vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color:white;
+}
+.common-btn{
+  color: orange;
+  border: none;
+}
+
+

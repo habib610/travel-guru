@@ -1,0 +1,42 @@
+.details h1{
+ font-size: 60px;
+ text-transform: uppercase;
+}
+.details p{
+    text-align: left;
+}
+.date{
+    width: 30vw;
+    height: auto;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: left;
+}
+.date button{
+    width: 100%;
+    display: block;
+    padding: 12px 0px;
+    color: black;
+    font-weight: 700;
+    background: orange;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+}
+.date button:hover{
+    background: orangered;
+}
+.date small {
+    color: rgb(136, 136, 136);
+    margin: 0;
+}
+.date strong {
+    background-color: lightgray;
+    display: block;
+    padding: 15px 10px;
+    text-align: left;
+    border-radius: 5px;
+}

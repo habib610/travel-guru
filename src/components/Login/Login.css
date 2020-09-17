@@ -1,0 +1,82 @@
+.login{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    background: white;
+    padding: 30px 20px;
+    border-radius: 20px;
+}
+.login form{
+    background-color: white;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 2px solid darkgray;
+}
+.login form input{
+    display: block;
+    padding: 10px 15px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: none;
+    color: black;
+    margin: 5px 0px;
+}
+.login form h2{
+    color: black;
+}
+
+.login form input[type="submit"]{
+    background-color: orange;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.login form input[type="submit"]:hover{
+    background-color: orangered;
+
+}
+.login form input:focus{
+  
+    border-bottom-color:  rebeccapurple;
+
+}
+.login span{
+    color: orangered;
+}
+.alternateBtn{
+    display: flex;
+    width: 20vw;
+    color: black;
+    margin-top: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.alternateBtn:active{
+    box-shadow: 5px 5px 5px orangered;
+}
+.alternateBtn img{
+    height: 30px;
+    margin-right: 30px;
+
+}
+.alternative{
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    margin-top: 10px;
+}
+.line{
+    width: 5vw;
+    height: 1px;
+    background-color: darkgray;
+}
