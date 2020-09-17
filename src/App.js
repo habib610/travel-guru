@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { Container } from "react-bootstrap";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,11 +9,16 @@ import NotFound from "./components/NotFound/NotFound";
 import LocationDetails from "./components/LocationDetails/LocationDetails";
 import Booking from "./components/Booking/Booking";
 import Login from "./components/Login/Login";
-
+import { createContext } from "react";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+export const UserContext = createContext()
 
 function App() {
+  const [loggedInUser, setLoggedInUser] = useState({})
   return (
+    <UserContext.Provider value ={[loggedInUser, setLoggedInUser]}>
     <div className="App">
+    <p>Name: {loggedInUser.name}</p>
       <Container>
         <Router>
           <Header></Header>
@@ -26,9 +31,9 @@ function App() {
            <Booking></Booking>
             </Route>
 
-            <Route path="/booking/:overView" >
+            <PrivateRoute path="/booking/:overView" >
             <LocationDetails></LocationDetails>
-            </Route>
+            </PrivateRoute>
 
             <Route path="/login" >
             <Login></Login>
@@ -44,6 +49,7 @@ function App() {
       </Container>
      
     </div>
+    </UserContext.Provider>
   );
 }
 

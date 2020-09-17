@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Button,
   Container,
@@ -12,7 +12,9 @@ import "./Header.css";
 
 import Logo from "../../Logo.png";
 import { Link } from "react-router-dom";
+import { UserContext } from "../../App";
 const Header = () => {
+  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
   return (
     <Container>
       <Navbar bg="transparent" variant="dark">
@@ -31,21 +33,21 @@ const Header = () => {
         </Form>
 
         <Nav className="ml-auto">
-          <Nav.Link href="#home" className="mx-2">
+          <Link to="/" className= "text-white mx-2">
             News
-          </Nav.Link>
-          <Nav.Link href="#features" className="mx-2">
+          </Link>
+          <Link to="/" className="text-white mx-2">
             Destination
-          </Nav.Link>
-          <Nav.Link href="#pricing" className="mx-2">
+          </Link>
+          <Link to="/" className="text-white mx-2">
             Blog
-          </Nav.Link>
-          <Nav.Link href="#pricing" className="mx-2">
+          </Link>
+          <Link to="/" className="text-white mx-2">
             Contact
-          </Nav.Link>
-      <Link to="/login">    <Button style={{ background: "orange", border: "none" }}>
+          </Link>
+     {loggedInUser.name ?loggedInUser.name : <Link to="/login">    <Button style={{ background: "orange", border: "none" }}>
             Login
-          </Button> </Link>
+          </Button> </Link>}
         </Nav>
       </Navbar>
     </Container>
